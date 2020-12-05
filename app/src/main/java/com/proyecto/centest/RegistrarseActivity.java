@@ -49,12 +49,13 @@ public class RegistrarseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrarse);
 
+        mAuth = FirebaseAuth.getInstance(); //Creamos la instancia para el firebase
+
         //Conexion entre el boton de la interfaz y el nombre que se le da en el codigo
         EditTextEmail = findViewById(R.id.editTextEmail);
         EditTextContraseña = findViewById(R.id.editTextContraseña);
         botonRegistro = findViewById(R.id.botonRegistro);
         google_button = findViewById(R.id.google_inicio);
-        mAuth = FirebaseAuth.getInstance(); //Creamos la instancia para el firebase
 
         //Aqui inicia sesion automaticamente si ya se hizo con anterioridad
         if (mAuth.getCurrentUser() != null){

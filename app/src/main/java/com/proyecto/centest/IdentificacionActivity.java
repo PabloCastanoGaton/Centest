@@ -30,12 +30,12 @@ public class IdentificacionActivity extends AppCompatActivity {
     private String emailIdent = "";
     private String contraseñaIdent = "";
 
-    DatabaseReference fDatabase;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) { //Main
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_identificacion);
+
+        mAuth = FirebaseAuth.getInstance(); //Instancia de firebase
 
         Button objetoBoton1 = findViewById(R.id.botonRegistroTo); //Este botón te manda a la clase de registro
         objetoBoton1.setOnClickListener(new View.OnClickListener() {
@@ -45,8 +45,6 @@ public class IdentificacionActivity extends AppCompatActivity {
                 startActivity(intencion1);
             }
         });
-
-        mAuth = FirebaseAuth.getInstance(); //Instancia de firebase
 
         if (mAuth.getCurrentUser() != null) { //Si el usuario ya ha iniciado sesion te mandará a la sesion iniciada directamente
             startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
