@@ -7,6 +7,7 @@ android {
     defaultConfig {
         applicationId "com.proyecto.centest"
         minSdkVersion 22
+        multiDexEnabled = true
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
