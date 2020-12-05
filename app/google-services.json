@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "215380704476",
+    "firebase_url": "https://centest-22c8f.firebaseio.com",
+    "project_id": "centest-22c8f",
+    "storage_bucket": "centest-22c8f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215380704476:android:f2142a90b35c1f860ac819",
+        "android_client_info": {
+          "package_name": "com.proyecto.centest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215380704476-vljo3g851haue71j11pfjo7gqup28scr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.proyecto.centest",
+            "certificate_hash": "b029b152a93fb7c5f278a4f76f60c2519c01f74d"
+          }
+        },
+        {
+          "client_id": "215380704476-31lmpgee0gmc0uci4lgdtci5funqnj3h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.proyecto.centest",
+            "certificate_hash": "5f6f8b8d3129d2e0134d3d5d99f044a25e595ca4"
+          }
+        },
+        {
+          "client_id": "215380704476-14nrjn7d4pvrroqiupo62fqsgn7kbnph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6Xj6ThZLv42jy9DBh1bIe_yLWpOrPTps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215380704476-14nrjn7d4pvrroqiupo62fqsgn7kbnph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
