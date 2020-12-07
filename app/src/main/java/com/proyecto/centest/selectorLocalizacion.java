@@ -31,7 +31,7 @@ public class selectorLocalizacion extends AppCompatActivity {
         objetoBoton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                
             }
         });
 
