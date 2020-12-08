@@ -42,12 +42,6 @@
             android:layout_marginTop="20dp"
             android:text="Registrar  usuario" />
 
-        <Button
-            android:id="@+id/google_inicio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Google sign-in" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

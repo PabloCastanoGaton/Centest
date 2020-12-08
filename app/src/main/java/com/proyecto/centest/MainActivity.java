@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         objetoBoton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intencionSelector = new Intent(view.getContext(), selectorLocalizacion.class);
+                Intent intencionSelector = new Intent(view.getContext(), LocalizacionActivity.class);
                 startActivity(intencionSelector);
             } });
     }
