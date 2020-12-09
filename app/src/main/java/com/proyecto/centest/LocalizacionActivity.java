@@ -20,8 +20,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class LocalizacionActivity extends FragmentActivity implements OnMapReadyCallback {
 
-    private GoogleMap mMap;
+    private GoogleMap mMap; //Uso de google maps
 
+    //Botones que se van a usar en el mapa
     private Button botonOviedo;
     private Button botonGijon;
     private Button botonAviles;
@@ -35,10 +36,12 @@ public class LocalizacionActivity extends FragmentActivity implements OnMapReady
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
+        //Enlace de los botones en el mapa y la programacion
         botonOviedo = (Button) findViewById(R.id.botonOviedo);
         botonGijon = (Button) findViewById(R.id.botonGijon);
         botonAviles = (Button) findViewById(R.id.botonAviles);
 
+        //Estos botones al pulsarlos centran la camara en el centro de la ciudad
         botonOviedo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,16 +71,20 @@ public class LocalizacionActivity extends FragmentActivity implements OnMapReady
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
+        //Se pone el mapa en satelite
         mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
+        //Permisos de localizacion
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             return;
         }
 
+        //Se activa la localizacion, un boton para rectivarla, y el zoom en el mapa mediante los dedos
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);
         mMap.getUiSettings().setZoomGesturesEnabled(true);
 
+        //Marcadores de los centros de estudio en Oviedo, Gijon y Aviles
         LatLng oviedo1 = new LatLng(43.364190, -5.845291);
         LatLng oviedo2 = new LatLng(43.368232, -5.875271);
         LatLng oviedo3 = new LatLng(43.370273 , -5.832376);

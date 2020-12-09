@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".IdentificacionActivity">
+    tools:context=".sesion.IdentificacionActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -48,7 +48,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginTop="20dp"
             android:gravity="bottom">
 
             <TextView

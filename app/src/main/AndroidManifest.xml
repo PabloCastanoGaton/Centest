@@ -16,6 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".centros.centrosGijon"></activity>
+        <activity android:name=".centros.centrosAviles" />
+        <activity android:name=".centros.centrosOviedo" />
         <activity android:name=".selectorLocalizacion" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -32,10 +35,9 @@
         <activity
             android:name=".LocalizacionActivity"
             android:label="@string/title_activity_localizacion" />
-        <activity android:name=".SesionIniciadaAdminActivity" />
-        <activity android:name=".RegistrarseActivity" />
+        <activity android:name=".sesion.RegistrarseActivity" />
         <activity android:name=".SesionIniciadaEstudianteActivity" />
-        <activity android:name=".IdentificacionActivity" />
+        <activity android:name=".sesion.IdentificacionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

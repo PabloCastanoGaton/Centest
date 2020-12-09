@@ -1,4 +1,4 @@
-package com.proyecto.centest;
+package com.proyecto.centest.sesion;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,18 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
-import java.util.Map;
+import com.proyecto.centest.R;
+import com.proyecto.centest.SesionIniciadaEstudianteActivity;
 
 public class RegistrarseActivity extends AppCompatActivity {
 
@@ -35,33 +29,25 @@ public class RegistrarseActivity extends AppCompatActivity {
     private String usuario = "";
     private String email = "";
     private String contraseña = "";
-    private GoogleSignInClient mGoogleSignInClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { //Main
-
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build();
-
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrarse);
 
         mAuth = FirebaseAuth.getInstance(); //Creamos la instancia para el firebase
 
-        //Conexion entre el boton de la interfaz y el nombre que se le da en el codigo
-        EditTextEmail = findViewById(R.id.editTextEmail);
-        EditTextContraseña = findViewById(R.id.editTextContraseña);
-        botonRegistro = findViewById(R.id.botonRegistro);
-        google_button = findViewById(R.id.google_inicio);
-
         //Aqui inicia sesion automaticamente si ya se hizo con anterioridad
         if (mAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
             finish();
         }
+
+        //Conexion entre el boton de la interfaz y el nombre que se le da en el codigo
+        EditTextEmail = findViewById(R.id.editTextEmail);
+        EditTextContraseña = findViewById(R.id.editTextContraseña);
+        botonRegistro = findViewById(R.id.botonRegistro);
 
         //La accion que realiza el boton de registro
         botonRegistro.setOnClickListener(new View.OnClickListener(){
@@ -87,21 +73,25 @@ public class RegistrarseActivity extends AppCompatActivity {
                     EditTextContraseña.setError("La contraseña debe tener 6 caracteres mínimo");
                 }
 
-                mAuth.createUserWithEmailAndPassword(email, contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() { //Aqui se crear el usuario y la contraseña mediante firebase
+                else { //Si todo esta correcto
 
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                    mAuth.createUserWithEmailAndPassword(email, contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() { //Aqui se crear el usuario y la contraseña mediante firebase
 
-                        if (task.isSuccessful()){ //Everything is right so create the user
-                            Toast.makeText(RegistrarseActivity.this, "Usuario creado correctamente", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+
+                            if (task.isSuccessful()){ //Si todo sale bien creara un usuario y pasara a la actividad de sesion iniciada
+                                Toast.makeText(RegistrarseActivity.this, "Usuario creado correctamente", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
+                            }
+
+                            else{ //Si hay un error
+                                Toast.makeText(RegistrarseActivity.this, "Error en el registro" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            }
                         }
+                    });
 
-                        else{
-                            Toast.makeText(RegistrarseActivity.this, "Error en el registro" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+                }
             }
         });
     }

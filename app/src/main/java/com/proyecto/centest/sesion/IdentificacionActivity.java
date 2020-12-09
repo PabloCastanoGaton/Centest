@@ -1,4 +1,4 @@
-package com.proyecto.centest;
+package com.proyecto.centest.sesion;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,8 +15,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+import com.proyecto.centest.R;
+import com.proyecto.centest.SesionIniciadaEstudianteActivity;
 
 public class IdentificacionActivity extends AppCompatActivity {
 
@@ -24,6 +24,8 @@ public class IdentificacionActivity extends AppCompatActivity {
     private EditText EditTextEmailIdentificacion;
     private EditText EditTextContraseñaIdentificacion;
     private Button botonInicio;
+    private Button objetoBoton1;
+
     FirebaseAuth mAuth;
 
     //Variables
@@ -37,7 +39,13 @@ public class IdentificacionActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance(); //Instancia de firebase
 
-        Button objetoBoton1 = findViewById(R.id.botonRegistroTo); //Este botón te manda a la clase de registro
+        if (mAuth.getCurrentUser() != null) { //Si el usuario ya ha iniciado sesion te mandará a la sesion iniciada directamente
+            startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
+            finish();
+        }
+
+        objetoBoton1 = (Button) findViewById(R.id.botonRegistroTo); //Este botón te manda a la clase de registro
+
         objetoBoton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,15 +54,10 @@ public class IdentificacionActivity extends AppCompatActivity {
             }
         });
 
-        if (mAuth.getCurrentUser() != null) { //Si el usuario ya ha iniciado sesion te mandará a la sesion iniciada directamente
-            startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
-            finish();
-        }
-
         //Enlace entre las cajas de texto y botones de la interfaz y el código
-        EditTextEmailIdentificacion = findViewById(R.id.editTextEmailIdent);
-        EditTextContraseñaIdentificacion = findViewById(R.id.editTextContraseñaIdent);
-        botonInicio = findViewById(R.id.botonInicio);
+        EditTextEmailIdentificacion = (EditText) findViewById(R.id.editTextEmailIdent);
+        EditTextContraseñaIdentificacion = (EditText) findViewById(R.id.editTextContraseñaIdent);
+        botonInicio = (Button) findViewById(R.id.botonInicio);
 
         botonInicio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,27 +72,29 @@ public class IdentificacionActivity extends AppCompatActivity {
                     return;
                 }
 
-                if(TextUtils.isEmpty(contraseñaIdent)){ //Si la contraseña está vacía dará un error
+                else if(TextUtils.isEmpty(contraseñaIdent)){ //Si la contraseña está vacía dará un error
                     EditTextEmailIdentificacion.setError("La contraseña está vacía");
                     return;
                 }
 
-                mAuth.signInWithEmailAndPassword(emailIdent, contraseñaIdent).addOnCompleteListener(new OnCompleteListener<AuthResult>() { //Inicio de sesion mediante el usuario y la contraseña con firebase
+               else {
+                    mAuth.signInWithEmailAndPassword(emailIdent, contraseñaIdent).addOnCompleteListener(new OnCompleteListener<AuthResult>() { //Inicio de sesion mediante el usuario y la contraseña con firebase
 
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
 
-                        if (task.isSuccessful()) { //If the task is successfully pass you to sesion iniciada
-                            Toast.makeText(IdentificacionActivity.this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
+                            if (task.isSuccessful()) { //Si la tarea funciona correctamente te pasara a sesion iniciada
+                                Toast.makeText(IdentificacionActivity.this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
+                            }
+
+                            else { //Si hay un error al iniciar sesion
+                                Toast.makeText(IdentificacionActivity.this, "Fallo al iniciar sesión", Toast.LENGTH_SHORT).show();
+                            }
+
                         }
-
-                        else{ //If the sign in gives an error
-                            Toast.makeText(IdentificacionActivity.this, "Fallo al iniciar sesión", Toast.LENGTH_SHORT).show();
-                        }
-
-                    }
-                });
+                    });
+                }
             }
         });
     }
