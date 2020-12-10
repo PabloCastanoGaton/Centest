@@ -20,31 +20,32 @@
             android:id="@+id/nombreGijon1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Nombre del centro: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <TextView
             android:id="@+id/maximoGijon1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Sitios maximos: " />
 
         <TextView
             android:id="@+id/actualGijon1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Sitios disponibles: " />
 
         <TextView
             android:id="@+id/calleGijon1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Calle: " />
 
         <TextView
             android:id="@+id/horarioGijon1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Horario: " />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,31 +57,32 @@
                 android:id="@+id/nombreGijon2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/maximoGijon2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Nombre del centro: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <TextView
                 android:id="@+id/actualGijon2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Sitios disponibles: " />
+
+            <TextView
+                android:id="@+id/maximoGijon2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sitios maximos: " />
 
             <TextView
                 android:id="@+id/calleGijon2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Calle: " />
 
             <TextView
                 android:id="@+id/horarioGijon2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Horario: " />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -92,31 +94,32 @@
                     android:id="@+id/nombreGijon3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
-
-                <TextView
-                    android:id="@+id/maximoGijon3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Nombre del centro: "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
                 <TextView
                     android:id="@+id/actualGijon3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Sitios disponibles: " />
+
+                <TextView
+                    android:id="@+id/maximoGijon3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sitios maximos: " />
 
                 <TextView
                     android:id="@+id/calleGijon3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Calle: " />
 
                 <TextView
                     android:id="@+id/horarioGijon3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Horario: " />
 
             </LinearLayout>
         </LinearLayout>

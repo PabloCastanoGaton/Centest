@@ -85,19 +85,19 @@ public class centrosOviedo extends AppCompatActivity {
                     int maximoOvi3 =Integer.parseInt(snapshot.child("Santullano").child("Maximo").getValue().toString());
                     String horarioOvi3 = snapshot.child("Santullano").child("Horario").getValue().toString();
 
-                    nombre1.setText("Nombre del centro: " + nombreOvi1);
+                    nombre1.setText(nombreOvi1);
                     calle1.setText("Calle: " + calleOvi1);
                     actual1.setText("Sitios disponible: " + disponibleOvi1);
                     maximo1.setText("Sitios maximos: " + maximoOvi1);
                     horario1.setText("Horario: " + horarioOvi1);
 
-                    nombre2.setText("Nombre del centro: " + nombreOvi2);
+                    nombre2.setText(nombreOvi2);
                     calle2.setText("Calle: " + calleOvi2);
                     actual2.setText("Sitios disponible: " + disponibleOvi2);
                     maximo2.setText("Sitios maximos: " + maximoOvi2);
                     horario2.setText("Horario: " + horarioOvi2);
 
-                    nombre3.setText("Nombre del centro: " + nombreOvi3);
+                    nombre3.setText(nombreOvi3);
                     calle3.setText("Calle: " + calleOvi3);
                     actual3.setText("Sitios disponible: " + disponibleOvi3);
                     maximo3.setText("Sitios maximos: " + maximoOvi3);

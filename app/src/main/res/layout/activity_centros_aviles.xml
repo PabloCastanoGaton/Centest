@@ -20,31 +20,32 @@
             android:id="@+id/nombreAviles1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
-
-        <TextView
-            android:id="@+id/maximoAviles1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Nombre del centro: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <TextView
             android:id="@+id/actualAviles1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Sitios disponibles: " />
+
+        <TextView
+            android:id="@+id/maximoAviles1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sitios maximos:" />
 
         <TextView
             android:id="@+id/calleAviles1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Calle: " />
 
         <TextView
             android:id="@+id/horarioAviles1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Horario: " />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,31 +57,34 @@
                 android:id="@+id/nombreAviles2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
-
-            <TextView
-                android:id="@+id/maximoAviles2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Nombre del centro: "
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <TextView
                 android:id="@+id/actualAviles2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Sitios disponibles: " />
+
+            <TextView
+                android:id="@+id/maximoAviles2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sitios maximos: " />
 
             <TextView
                 android:id="@+id/calleAviles2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                tools:text="Calle: " />
 
             <TextView
                 android:id="@+id/horarioAviles2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                tools:text="Horario: " />
 
         </LinearLayout>
     </LinearLayout>

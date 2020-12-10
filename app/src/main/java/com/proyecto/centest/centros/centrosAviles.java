@@ -56,27 +56,27 @@ public class centrosAviles extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                String nombreAvi1 = snapshot.child("Conde del Real Agrado").getValue().toString();
+                String nombreAvi1 = snapshot.child("Conde del Real Agrado").child("Nombre").getValue().toString();
                 String calleAvi1 = snapshot.child("Conde del Real Agrado").child("Calle").getValue().toString();
                 int disponibleAvi1 = Integer.parseInt(snapshot.child("Conde del Real Agrado").child("Disponible").getValue().toString());
                 int maximoAvi1 = Integer.parseInt(snapshot.child("Conde del Real Agrado").child("Maximo").getValue().toString());
                 String horarioAvi1 = snapshot.child("Conde del Real Agrado").child("Horario").getValue().toString();
 
-                String nombreAvi2 = snapshot.child("Biblioteca municipal de Aviles").getValue().toString();
+                String nombreAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Nombre").getValue().toString();
                 String calleAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Calle").getValue().toString();
                 int disponibleAvi2 = Integer.parseInt(snapshot.child("Biblioteca municipal de Aviles").child("Disponible").getValue().toString());
                 int maximoAvi2 = Integer.parseInt(snapshot.child("Biblioteca municipal de Aviles").child("Maximo").getValue().toString());
                 String horarioAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Horario").getValue().toString();
 
-                nombre1.setText("Nombre del centro: " + nombreAvi1);
+                nombre1.setText(nombreAvi1);
                 calle1.setText("Calle: " + calleAvi1);
-                actual1.setText("Disponible: " + disponibleAvi1);
+                actual1.setText("Sitios disponible: " + disponibleAvi1);
                 maximo1.setText("Sitios maximos: " + maximoAvi1);
                 horario1.setText("Horario: " + horarioAvi1);
 
-                nombre2.setText("Nombre del centro: " + nombreAvi2);
+                nombre2.setText(nombreAvi2);
                 calle2.setText("Calle: " + calleAvi2);
-                actual2.setText("Disponible: " + disponibleAvi2);
+                actual2.setText("Sitios disponible: " + disponibleAvi2);
                 maximo2.setText("Sitios maximos: " + maximoAvi2);
                 horario2.setText("Horario: " + horarioAvi2);
                 

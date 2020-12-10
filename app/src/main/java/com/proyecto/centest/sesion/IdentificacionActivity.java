@@ -23,8 +23,10 @@ public class IdentificacionActivity extends AppCompatActivity {
     //Cajas de texto, boton y firebaseauth
     private EditText EditTextEmailIdentificacion;
     private EditText EditTextContraseñaIdentificacion;
+
     private Button botonInicio;
     private Button objetoBoton1;
+    private Button restablecer;
     private Button localizacion;
 
     FirebaseAuth mAuth;
@@ -46,12 +48,20 @@ public class IdentificacionActivity extends AppCompatActivity {
         }
 
         objetoBoton1 = (Button) findViewById(R.id.botonRegistroTo); //Este botón te manda a la clase de registro
-
         objetoBoton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intencion1 = new Intent(view.getContext(), RegistrarseActivity.class);
                 startActivity(intencion1);
+            }
+        });
+
+        restablecer = (Button) findViewById(R.id.restablcerButton);
+        restablecer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intencion2 = new Intent(view.getContext(), restablecer.class);
+                startActivity(intencion2);
             }
         });
 

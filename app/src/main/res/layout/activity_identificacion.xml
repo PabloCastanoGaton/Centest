@@ -68,6 +68,22 @@
                 android:background="#009688"
                 android:text="Registro" />
 
+            <TextView
+                android:id="@+id/restablecerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="¿Necesitas restablecer tu cuenta?"
+                android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/restablcerButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#009688"
+                android:text="Restablecer" />
+
         </LinearLayout>
 
     </LinearLayout>

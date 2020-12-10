@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+import com.proyecto.centest.LocalizacionActivity;
 import com.proyecto.centest.R;
 import com.proyecto.centest.centros.centrosAviles;
 import com.proyecto.centest.centros.centrosGijon;
@@ -22,6 +23,7 @@ public class SesionIniciadaEstudianteActivity extends AppCompatActivity {
     private Button botonOviedo;
     private Button botonGijon;
     private Button botonAviles;
+    private Button botonLocalizacion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +33,7 @@ public class SesionIniciadaEstudianteActivity extends AppCompatActivity {
         botonOviedo = (Button) findViewById(R.id.botonOviedo);
         botonGijon = (Button) findViewById(R.id.botonGijon);
         botonAviles = (Button) findViewById(R.id.botonAviles);
+        botonLocalizacion = (Button) findViewById(R.id.localizacionButton);
 
         botonOviedo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +56,14 @@ public class SesionIniciadaEstudianteActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intencionAviles = new Intent(view.getContext(), centrosAviles.class);
                 startActivity(intencionAviles);
+            }
+        });
+
+        botonLocalizacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intencionLocalizacion = new Intent(view.getContext(), LocalizacionActivity.class);
+                startActivity(intencionLocalizacion);
             }
         });
 
