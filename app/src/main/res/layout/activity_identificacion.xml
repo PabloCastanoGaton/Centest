@@ -27,8 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="Email" />
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            />
 
         <EditText
             android:id="@+id/editTextContraseñaIdent"
@@ -40,8 +41,10 @@
 
         <Button
             android:id="@+id/botonInicio"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#009688"
             android:text="Iniciar sesión" />
 
         <LinearLayout
@@ -59,8 +62,10 @@
 
             <Button
                 android:id="@+id/botonRegistroTo"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="#009688"
                 android:text="Registro" />
 
         </LinearLayout>

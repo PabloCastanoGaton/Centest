@@ -54,7 +54,6 @@ public class RegistrarseActivity extends AppCompatActivity {
             public void onClick (View view){
 
                 //Aquí al darle al botón va a obtener los datos que están en los campos
-                usuario = EditTextUsuario.getText().toString();
                 email = EditTextEmail.getText().toString().trim();
                 contraseña = EditTextContraseña.getText().toString().trim();
 
@@ -72,14 +71,12 @@ public class RegistrarseActivity extends AppCompatActivity {
                     EditTextContraseña.setError("La contraseña debe tener 6 caracteres mínimo");
                 }
 
-                else { //Si todo esta correcto
-
                     mAuth.createUserWithEmailAndPassword(email, contraseña).addOnCompleteListener(new OnCompleteListener<AuthResult>() { //Aqui se crear el usuario y la contraseña mediante firebase
 
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
-                            if (task.isSuccessful()){ //Si todo sale bien creara un usuario y pasara a la actividad de sesion iniciada
+                            if (task.isSuccessful()){
                                 Toast.makeText(RegistrarseActivity.this, "Usuario creado correctamente", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
                             }
@@ -89,8 +86,6 @@ public class RegistrarseActivity extends AppCompatActivity {
                             }
                         }
                     });
-
-                }
             }
         });
     }

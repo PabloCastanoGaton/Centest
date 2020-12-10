@@ -22,28 +22,36 @@
 
         <Button
             android:id="@+id/botonOviedo"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#009688"
             android:text="Oviedo" />
 
         <Button
             android:id="@+id/botonAviles"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:background="#009688"
             android:text="Áviles" />
 
         <Button
             android:id="@+id/botonGijon"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:background="#009688"
             android:text="Gijón" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -52,17 +60,21 @@
 
             <Button
                 android:id="@+id/localizacionButton"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Localizacion"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"
+                android:background="#009688"
+                android:text="Localizacion" />
 
             <Button
                 android:id="@+id/cerrarSesion"
+                style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cerrar sesión"
-                android:onClick="cierreSesion"/>
+                android:background="#009688"
+                android:onClick="cierreSesion"
+                android:text="Cerrar sesión" />
         </LinearLayout>
 
     </LinearLayout>

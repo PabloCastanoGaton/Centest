@@ -24,15 +24,19 @@
 
         <Button
             android:id="@+id/identificacion"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="#009688"
             android:text="Identificación" />
 
         <Button
             android:id="@+id/localizacion"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:backgroundTint="#009688"
             android:text="Localización de centros" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -58,14 +58,14 @@ public class centrosAviles extends AppCompatActivity {
 
                 String nombreAvi1 = snapshot.child("Conde del Real Agrado").getValue().toString();
                 String calleAvi1 = snapshot.child("Conde del Real Agrado").child("Calle").getValue().toString();
-                String disponibleAvi1 = snapshot.child("Conde del Real Agrado").child("Disponible").getValue().toString();
-                String maximoAvi1 = snapshot.child("Conde del Real Agrado").child("Maximo").getValue().toString();
+                int disponibleAvi1 = Integer.parseInt(snapshot.child("Conde del Real Agrado").child("Disponible").getValue().toString());
+                int maximoAvi1 = Integer.parseInt(snapshot.child("Conde del Real Agrado").child("Maximo").getValue().toString());
                 String horarioAvi1 = snapshot.child("Conde del Real Agrado").child("Horario").getValue().toString();
 
                 String nombreAvi2 = snapshot.child("Biblioteca municipal de Aviles").getValue().toString();
                 String calleAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Calle").getValue().toString();
-                String disponibleAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Disponible").getValue().toString();
-                String maximoAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Maximo").getValue().toString();
+                int disponibleAvi2 = Integer.parseInt(snapshot.child("Biblioteca municipal de Aviles").child("Disponible").getValue().toString());
+                int maximoAvi2 = Integer.parseInt(snapshot.child("Biblioteca municipal de Aviles").child("Maximo").getValue().toString());
                 String horarioAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Horario").getValue().toString();
 
                 nombre1.setText("Nombre del centro: " + nombreAvi1);

@@ -20,31 +20,31 @@
             android:id="@+id/nombreOviedo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Nombre del centro: " />
 
         <TextView
             android:id="@+id/maximoOviedo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Sitios maximos: " />
 
         <TextView
             android:id="@+id/actualOviedo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Sitios disponibles: " />
 
         <TextView
             android:id="@+id/calleOviedo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Calle: " />
 
         <TextView
             android:id="@+id/horarioOviedo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Horario: " />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -56,31 +56,31 @@
                 android:id="@+id/nombreOviedo2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Nombre del centro" />
 
             <TextView
                 android:id="@+id/maximoOviedo2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Sitios maximos: " />
 
             <TextView
                 android:id="@+id/actualOviedo2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Sitios disponibles" />
 
             <TextView
                 android:id="@+id/calleOviedo2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Calle: " />
 
             <TextView
                 android:id="@+id/horarioOviedo2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="Horario: " />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -92,34 +92,35 @@
                     android:id="@+id/nombreOviedo3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Nombre del centro: " />
 
                 <TextView
                     android:id="@+id/maximoOviedo3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Sitios maximos: " />
 
                 <TextView
                     android:id="@+id/actualOviedo3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Sitios disponibles: " />
 
                 <TextView
                     android:id="@+id/calleOviedo3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Calle: " />
 
                 <TextView
                     android:id="@+id/horarioOviedo3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:text="Horario:" />
 
             </LinearLayout>
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

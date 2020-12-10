@@ -59,15 +59,6 @@ public class IdentificacionActivity extends AppCompatActivity {
         EditTextEmailIdentificacion = (EditText) findViewById(R.id.editTextEmailIdent);
         EditTextContraseñaIdentificacion = (EditText) findViewById(R.id.editTextContraseñaIdent);
         botonInicio = (Button) findViewById(R.id.botonInicio);
-        localizacion = (Button) findViewById(R.id.localizacionButton);
-
-        localizacion.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intencion2 = new Intent(v.getContext(), LocalizacionActivity.class);
-                startActivity(intencion2);
-            }
-        });
 
         botonInicio.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +74,7 @@ public class IdentificacionActivity extends AppCompatActivity {
                 }
 
                 else if(TextUtils.isEmpty(contraseñaIdent)){ //Si la contraseña está vacía dará un error
-                    EditTextEmailIdentificacion.setError("La contraseña está vacía");
+                    EditTextContraseñaIdentificacion.setError("La contraseña está vacía");
                     return;
                 }
 

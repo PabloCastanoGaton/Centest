@@ -67,39 +67,39 @@ public class centrosOviedo extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
 
-                    String nombreOvi1 = snapshot.child("El vasco").getValue().toString();
+                    String nombreOvi1 = snapshot.child("El vasco").child("Nombre").getValue().toString();
                     String calleOvi1 = snapshot.child("El vasco").child("Calle").getValue().toString();
-                    String disponibleOvi1 = snapshot.child("El vasco").child("Disponible").getValue().toString();
-                    String maximoOvi1 = snapshot.child("El vasco").child("Maximo").getValue().toString();
+                    int disponibleOvi1 = Integer.parseInt(snapshot.child("El vasco").child("Disponible").getValue().toString());
+                    int maximoOvi1 = Integer.parseInt(snapshot.child("El vasco").child("Maximo").getValue().toString());
                     String horarioOvi1 = snapshot.child("El vasco").child("Horario").getValue().toString();
 
-                    String nombreOvi2 = snapshot.child("La Florida").getValue().toString();
+                    String nombreOvi2 = snapshot.child("La Florida").child("Nombre").getValue().toString();
                     String calleOvi2 = snapshot.child("La Florida").child("Calle").getValue().toString();
-                    String disponibleOvi2 = snapshot.child("La Florida").child("Disponible").getValue().toString();
-                    String maximoOvi2 = snapshot.child("La Florida").child("Maximo").getValue().toString();
+                    int disponibleOvi2 = Integer.parseInt(snapshot.child("La Florida").child("Disponible").getValue().toString());
+                    int maximoOvi2 = Integer.parseInt(snapshot.child("La Florida").child("Maximo").getValue().toString());
                     String horarioOvi2 = snapshot.child("La Florida").child("Horario").getValue().toString();
 
-                    String nombreOvi3 = snapshot.child("Santullano").getValue().toString();
+                    String nombreOvi3 = snapshot.child("Santullano").child("Nombre").getValue().toString();
                     String calleOvi3 = snapshot.child("Santullano").child("Calle").getValue().toString();
-                    String disponibleOvi3 = snapshot.child("Santullano").child("Disponible").getValue().toString();
-                    String maximoOvi3 = snapshot.child("Santullano").child("Maximo").getValue().toString();
+                    int disponibleOvi3 = Integer.parseInt(snapshot.child("Santullano").child("Disponible").getValue().toString());
+                    int maximoOvi3 =Integer.parseInt(snapshot.child("Santullano").child("Maximo").getValue().toString());
                     String horarioOvi3 = snapshot.child("Santullano").child("Horario").getValue().toString();
 
                     nombre1.setText("Nombre del centro: " + nombreOvi1);
                     calle1.setText("Calle: " + calleOvi1);
-                    actual1.setText("Disponible: " + disponibleOvi1);
+                    actual1.setText("Sitios disponible: " + disponibleOvi1);
                     maximo1.setText("Sitios maximos: " + maximoOvi1);
                     horario1.setText("Horario: " + horarioOvi1);
 
                     nombre2.setText("Nombre del centro: " + nombreOvi2);
                     calle2.setText("Calle: " + calleOvi2);
-                    actual2.setText("Disponible: " + disponibleOvi2);
+                    actual2.setText("Sitios disponible: " + disponibleOvi2);
                     maximo2.setText("Sitios maximos: " + maximoOvi2);
                     horario2.setText("Horario: " + horarioOvi2);
 
                     nombre3.setText("Nombre del centro: " + nombreOvi3);
                     calle3.setText("Calle: " + calleOvi3);
-                    actual3.setText("Disponible: " + disponibleOvi3);
+                    actual3.setText("Sitios disponible: " + disponibleOvi3);
                     maximo3.setText("Sitios maximos: " + maximoOvi3);
                     horario3.setText("Horario: " + horarioOvi3);
 
