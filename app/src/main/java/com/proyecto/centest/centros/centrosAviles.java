@@ -1,12 +1,17 @@
 package com.proyecto.centest.centros;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.proyecto.centest.R;
 
 public class centrosAviles extends AppCompatActivity {
@@ -46,5 +51,41 @@ public class centrosAviles extends AppCompatActivity {
 
         horario1 = (TextView) findViewById(R.id.horarioAviles1);
         horario2 = (TextView) findViewById(R.id.horarioAviles2);
+        
+        mDataBase.child("Aviles").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                String nombreAvi1 = snapshot.child("Conde del Real Agrado").getValue().toString();
+                String calleAvi1 = snapshot.child("Conde del Real Agrado").child("Calle").getValue().toString();
+                String disponibleAvi1 = snapshot.child("Conde del Real Agrado").child("Disponible").getValue().toString();
+                String maximoAvi1 = snapshot.child("Conde del Real Agrado").child("Maximo").getValue().toString();
+                String horarioAvi1 = snapshot.child("Conde del Real Agrado").child("Horario").getValue().toString();
+
+                String nombreAvi2 = snapshot.child("Biblioteca municipal de Aviles").getValue().toString();
+                String calleAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Calle").getValue().toString();
+                String disponibleAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Disponible").getValue().toString();
+                String maximoAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Maximo").getValue().toString();
+                String horarioAvi2 = snapshot.child("Biblioteca municipal de Aviles").child("Horario").getValue().toString();
+
+                nombre1.setText("Nombre del centro: " + nombreAvi1);
+                calle1.setText("Calle: " + calleAvi1);
+                actual1.setText("Disponible: " + disponibleAvi1);
+                maximo1.setText("Sitios maximos: " + maximoAvi1);
+                horario1.setText("Horario: " + horarioAvi1);
+
+                nombre2.setText("Nombre del centro: " + nombreAvi2);
+                calle2.setText("Calle: " + calleAvi2);
+                actual2.setText("Disponible: " + disponibleAvi2);
+                maximo2.setText("Sitios maximos: " + maximoAvi2);
+                horario2.setText("Horario: " + horarioAvi2);
+                
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 }

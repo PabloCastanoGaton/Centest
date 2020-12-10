@@ -73,17 +73,17 @@ public class centrosOviedo extends AppCompatActivity {
                     String maximoOvi1 = snapshot.child("El vasco").child("Maximo").getValue().toString();
                     String horarioOvi1 = snapshot.child("El vasco").child("Horario").getValue().toString();
 
-                    String nombreOvi2 = snapshot.child("El vasco").getValue().toString();
-                    String calleOvi2 = snapshot.child("El vasco").child("Calle").getValue().toString();
-                    String disponibleOvi2 = snapshot.child("El vasco").child("Disponible").getValue().toString();
-                    String maximoOvi2 = snapshot.child("El vasco").child("Maximo").getValue().toString();
-                    String horarioOvi2 = snapshot.child("El vasco").child("Horario").getValue().toString();
+                    String nombreOvi2 = snapshot.child("La Florida").getValue().toString();
+                    String calleOvi2 = snapshot.child("La Florida").child("Calle").getValue().toString();
+                    String disponibleOvi2 = snapshot.child("La Florida").child("Disponible").getValue().toString();
+                    String maximoOvi2 = snapshot.child("La Florida").child("Maximo").getValue().toString();
+                    String horarioOvi2 = snapshot.child("La Florida").child("Horario").getValue().toString();
 
-                    String nombreOvi3 = snapshot.child("El vasco").getValue().toString();
-                    String calleOvi3 = snapshot.child("El vasco").child("Calle").getValue().toString();
-                    String disponibleOvi3 = snapshot.child("El vasco").child("Disponible").getValue().toString();
-                    String maximoOvi3 = snapshot.child("El vasco").child("Maximo").getValue().toString();
-                    String horarioOvi3 = snapshot.child("El vasco").child("Horario").getValue().toString();
+                    String nombreOvi3 = snapshot.child("Santullano").getValue().toString();
+                    String calleOvi3 = snapshot.child("Santullano").child("Calle").getValue().toString();
+                    String disponibleOvi3 = snapshot.child("Santullano").child("Disponible").getValue().toString();
+                    String maximoOvi3 = snapshot.child("Santullano").child("Maximo").getValue().toString();
+                    String horarioOvi3 = snapshot.child("Santullano").child("Horario").getValue().toString();
 
                     nombre1.setText("Nombre del centro: " + nombreOvi1);
                     calle1.setText("Calle: " + calleOvi1);
