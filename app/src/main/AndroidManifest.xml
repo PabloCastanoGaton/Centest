@@ -36,7 +36,7 @@
             android:name=".LocalizacionActivity"
             android:label="@string/title_activity_localizacion" />
         <activity android:name=".sesion.RegistrarseActivity" />
-        <activity android:name=".SesionIniciadaEstudianteActivity" />
+        <activity android:name=".sesion.SesionIniciadaEstudianteActivity" />
         <activity android:name=".sesion.IdentificacionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

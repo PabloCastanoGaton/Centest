@@ -45,7 +45,7 @@ public class LocalizacionActivity extends FragmentActivity implements OnMapReady
         botonOviedo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LatLng oviedo = new LatLng(43.364190, -5.845291);
+                LatLng oviedo = new LatLng(43.361914, -5.849389);
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(oviedo,7));
             }
         });
@@ -53,7 +53,7 @@ public class LocalizacionActivity extends FragmentActivity implements OnMapReady
         botonGijon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LatLng gijon = new LatLng(43.364190, -5.845291);
+                LatLng gijon = new LatLng(43.532201, -5.661119);
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(gijon,7));
             }
         });
@@ -61,7 +61,7 @@ public class LocalizacionActivity extends FragmentActivity implements OnMapReady
         botonAviles.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LatLng aviles = new LatLng(43.364190, -5.845291);
+                LatLng aviles = new LatLng(43.557952, -5.924665);
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(aviles,7));
             }
         });

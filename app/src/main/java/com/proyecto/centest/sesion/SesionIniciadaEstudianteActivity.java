@@ -1,4 +1,4 @@
-package com.proyecto.centest;
+package com.proyecto.centest.sesion;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
+import com.proyecto.centest.R;
 import com.proyecto.centest.centros.centrosAviles;
 import com.proyecto.centest.centros.centrosGijon;
 import com.proyecto.centest.centros.centrosOviedo;
