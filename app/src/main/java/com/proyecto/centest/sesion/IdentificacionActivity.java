@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.proyecto.centest.LocalizacionActivity;
 import com.proyecto.centest.R;
 
 public class IdentificacionActivity extends AppCompatActivity {
@@ -24,6 +25,7 @@ public class IdentificacionActivity extends AppCompatActivity {
     private EditText EditTextContraseñaIdentificacion;
     private Button botonInicio;
     private Button objetoBoton1;
+    private Button localizacion;
 
     FirebaseAuth mAuth;
 
@@ -57,6 +59,15 @@ public class IdentificacionActivity extends AppCompatActivity {
         EditTextEmailIdentificacion = (EditText) findViewById(R.id.editTextEmailIdent);
         EditTextContraseñaIdentificacion = (EditText) findViewById(R.id.editTextContraseñaIdent);
         botonInicio = (Button) findViewById(R.id.botonInicio);
+        localizacion = (Button) findViewById(R.id.localizacionButton);
+
+        localizacion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intencion2 = new Intent(v.getContext(), LocalizacionActivity.class);
+                startActivity(intencion2);
+            }
+        });
 
         botonInicio.setOnClickListener(new View.OnClickListener() {
             @Override
