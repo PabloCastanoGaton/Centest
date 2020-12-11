@@ -17,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.proyecto.centest.R;
 
-public class RegistrarseActivity extends AppCompatActivity {
+public class registrarseActivity extends AppCompatActivity {
 
     //Textos, botones y firebaseauth
     private EditText EditTextUsuario, EditTextEmail, EditTextContraseña;
@@ -39,7 +39,7 @@ public class RegistrarseActivity extends AppCompatActivity {
 
         //Aqui inicia sesion automaticamente si ya se hizo con anterioridad
         if (mAuth.getCurrentUser() != null){
-            startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
+            startActivity(new Intent(getApplicationContext(), sesionIniciadaActivity.class));
             finish();
         }
 
@@ -77,12 +77,12 @@ public class RegistrarseActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful()){
-                                Toast.makeText(RegistrarseActivity.this, "Usuario creado correctamente", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
+                                Toast.makeText(registrarseActivity.this, "Usuario creado correctamente", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), sesionIniciadaActivity.class));
                             }
 
                             else{ //Si hay un error
-                                Toast.makeText(RegistrarseActivity.this, "Error en el registro" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(registrarseActivity.this, "Error en el registro" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

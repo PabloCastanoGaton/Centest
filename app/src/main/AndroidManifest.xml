@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/icono_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sesion.restablecer"></activity>
+        <activity android:name=".sesion.restablecerActivity"></activity>
         <activity android:name=".centros.centrosGijon" />
         <activity android:name=".centros.centrosAviles" />
         <activity android:name=".centros.centrosOviedo" />
@@ -33,11 +33,11 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".LocalizacionActivity"
+            android:name=".localizacionActivity"
             android:label="@string/title_activity_localizacion" />
-        <activity android:name=".sesion.RegistrarseActivity" />
-        <activity android:name=".sesion.SesionIniciadaEstudianteActivity" />
-        <activity android:name=".sesion.IdentificacionActivity" />
+        <activity android:name=".sesion.registrarseActivity" />
+        <activity android:name=".sesion.sesionIniciadaActivity" />
+        <activity android:name=".sesion.identificacionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

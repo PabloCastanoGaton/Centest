@@ -9,14 +9,13 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
-import com.proyecto.centest.LocalizacionActivity;
+import com.proyecto.centest.localizacionActivity;
 import com.proyecto.centest.R;
 import com.proyecto.centest.centros.centrosAviles;
 import com.proyecto.centest.centros.centrosGijon;
 import com.proyecto.centest.centros.centrosOviedo;
-import com.proyecto.centest.sesion.IdentificacionActivity;
 
-public class SesionIniciadaEstudianteActivity extends AppCompatActivity {
+public class sesionIniciadaActivity extends AppCompatActivity {
 
     private DatabaseReference mDataBase;
 
@@ -62,7 +61,7 @@ public class SesionIniciadaEstudianteActivity extends AppCompatActivity {
         botonLocalizacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intencionLocalizacion = new Intent(view.getContext(), LocalizacionActivity.class);
+                Intent intencionLocalizacion = new Intent(view.getContext(), localizacionActivity.class);
                 startActivity(intencionLocalizacion);
             }
         });
@@ -71,7 +70,7 @@ public class SesionIniciadaEstudianteActivity extends AppCompatActivity {
 
     public void cierreSesion (View view){ //Este void lo que hace es cerrar la sesion de quien tenga la cuenta activada
         FirebaseAuth.getInstance().signOut();
-        startActivity(new Intent(getApplicationContext(), IdentificacionActivity.class));
+        startActivity(new Intent(getApplicationContext(), identificacionActivity.class));
         finish();
     }
 }

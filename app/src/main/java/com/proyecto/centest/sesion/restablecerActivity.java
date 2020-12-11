@@ -13,15 +13,15 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
 import com.proyecto.centest.R;
 
-public class restablecer extends AppCompatActivity {
+public class restablecerActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
 
     private EditText emailRestablecer;
     private Button botonRegistro;
+
     private ProgressDialog mDialog;
 
     private String email = "";
@@ -51,7 +51,7 @@ public class restablecer extends AppCompatActivity {
                 }
 
                 else {
-                    Toast.makeText(restablecer.this, "Debes ingresar el email", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(restablecerActivity.this, "Debes ingresar el email", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -66,11 +66,11 @@ public class restablecer extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
 
                 if (task.isSuccessful()){
-                    Toast.makeText(restablecer.this, "Se ha enviado un correo para restablecer la contrasena", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(restablecerActivity.this, "Se ha enviado un correo para restablecer la contrasena", Toast.LENGTH_SHORT).show();
                 }
 
                 else{
-                    Toast.makeText(restablecer.this, "No se pudo enviar el correo de reestablecer contrasena", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(restablecerActivity.this, "No se pudo enviar el correo de reestablecer contrasena", Toast.LENGTH_SHORT).show();
                 }
 
                 mDialog.dismiss();

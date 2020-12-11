@@ -15,10 +15,9 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.proyecto.centest.LocalizacionActivity;
 import com.proyecto.centest.R;
 
-public class IdentificacionActivity extends AppCompatActivity {
+public class identificacionActivity extends AppCompatActivity {
 
     //Cajas de texto, boton y firebaseauth
     private EditText EditTextEmailIdentificacion;
@@ -43,7 +42,7 @@ public class IdentificacionActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance(); //Instancia de firebase
 
         if (mAuth.getCurrentUser() != null) { //Si el usuario ya ha iniciado sesion te mandará a la sesion iniciada directamente
-            startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
+            startActivity(new Intent(getApplicationContext(), sesionIniciadaActivity.class));
             finish();
         }
 
@@ -51,7 +50,7 @@ public class IdentificacionActivity extends AppCompatActivity {
         objetoBoton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intencion1 = new Intent(view.getContext(), RegistrarseActivity.class);
+                Intent intencion1 = new Intent(view.getContext(), registrarseActivity.class);
                 startActivity(intencion1);
             }
         });
@@ -60,7 +59,7 @@ public class IdentificacionActivity extends AppCompatActivity {
         restablecer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intencion2 = new Intent(view.getContext(), restablecer.class);
+                Intent intencion2 = new Intent(view.getContext(), restablecerActivity.class);
                 startActivity(intencion2);
             }
         });
@@ -95,12 +94,12 @@ public class IdentificacionActivity extends AppCompatActivity {
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if (task.isSuccessful()) { //Si la tarea funciona correctamente te pasara a sesion iniciada
-                                Toast.makeText(IdentificacionActivity.this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
+                                Toast.makeText(identificacionActivity.this, "Inicio de sesión correcto", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), sesionIniciadaActivity.class));
                             }
 
                             else { //Si hay un error al iniciar sesion
-                                Toast.makeText(IdentificacionActivity.this, "Fallo al iniciar sesión", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(identificacionActivity.this, "Fallo al iniciar sesión", Toast.LENGTH_SHORT).show();
                             }
 
                         }

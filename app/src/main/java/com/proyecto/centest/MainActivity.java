@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.proyecto.centest.sesion.IdentificacionActivity;
-import com.proyecto.centest.sesion.SesionIniciadaEstudianteActivity;
+import com.proyecto.centest.sesion.identificacionActivity;
+import com.proyecto.centest.sesion.sesionIniciadaActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance(); //Instancia de firebase
 
         if (mAuth.getCurrentUser() != null) { //Si el usuario ya ha iniciado sesion te mandará a la actividad de sesion iniciada
-            startActivity(new Intent(getApplicationContext(), SesionIniciadaEstudianteActivity.class));
+            startActivity(new Intent(getApplicationContext(), sesionIniciadaActivity.class));
             finish();
         }
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         objetoBoton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intencionIdentificacion = new Intent(view.getContext(), IdentificacionActivity.class);
+                Intent intencionIdentificacion = new Intent(view.getContext(), identificacionActivity.class);
                 startActivity(intencionIdentificacion);
         } });
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         objetoBoton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intencionSelector = new Intent(view.getContext(), LocalizacionActivity.class);
+                Intent intencionSelector = new Intent(view.getContext(), localizacionActivity.class);
                 startActivity(intencionSelector);
             } });
     }
