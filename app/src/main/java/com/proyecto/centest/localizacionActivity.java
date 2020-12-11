@@ -89,22 +89,22 @@ public class localizacionActivity extends FragmentActivity implements OnMapReady
         LatLng oviedo2 = new LatLng(43.368232, -5.875271);
         LatLng oviedo3 = new LatLng(43.370273 , -5.832376);
 
-        mMap.addMarker(new MarkerOptions().position(oviedo1).title("El Vasco").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-        mMap.addMarker(new MarkerOptions().position(oviedo2).title("La Florida").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-        mMap.addMarker(new MarkerOptions().position(oviedo3).title("Santullano").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        mMap.addMarker(new MarkerOptions().position(oviedo1).title("El Vasco").snippet("Calle: C. Manuel García Conde, 13").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        mMap.addMarker(new MarkerOptions().position(oviedo2).title("La Florida").snippet("Calle: Paseo de la Florida, 46").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        mMap.addMarker(new MarkerOptions().position(oviedo3).title("Santullano").snippet("Calle: Cl. Joaquín Costa, 48").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
 
         LatLng gijon1 = new LatLng(43.527005, -5.663828);
         LatLng gijon2 = new LatLng(43.536391, -5.665824);
         LatLng gijon3 = new LatLng(43.536356, -5.660700);
 
-        mMap.addMarker(new MarkerOptions().position(gijon1).title("El Llano").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        mMap.addMarker(new MarkerOptions().position(gijon2).title("Ceuias").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-        mMap.addMarker(new MarkerOptions().position(gijon3).title("Praxis").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mMap.addMarker(new MarkerOptions().position(gijon1).title("El Llano").snippet("Calle: Calle Río de Oro, 37").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mMap.addMarker(new MarkerOptions().position(gijon2).title("Ceuias").snippet("Calle: Calle Mieres, 28").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mMap.addMarker(new MarkerOptions().position(gijon3).title("Praxis").snippet("Calle: Av. Manuel Llaneza, 8-10").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
         LatLng aviles1 = new LatLng(43.554647, -5.919220);
         LatLng aviles2= new LatLng(43.554491, -5.923472);
 
-        mMap.addMarker(new MarkerOptions().position(aviles1).title("Conde del Real Agrado").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
-        mMap.addMarker(new MarkerOptions().position(aviles2).title("Biblioteca municipal de Avilés").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+        mMap.addMarker(new MarkerOptions().position(aviles1).title("Conde del Real Agrado").snippet("Calle: Calle Conde del Real Agrado, 2").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
+        mMap.addMarker(new MarkerOptions().position(aviles2).title("Biblioteca municipal de Avilés").snippet("Calle: Plaza Domingo Álvarez Acebal, 2").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_CYAN)));
     }
 }
