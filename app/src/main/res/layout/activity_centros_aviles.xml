@@ -21,20 +21,15 @@
             android:id="@+id/nombreAviles1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre del centro: "
+            android:text="Nombre del centro"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <TextView
             android:id="@+id/actualAviles1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sitios disponibles: " />
-
-        <TextView
-            android:id="@+id/maximoAviles1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sitios maximos:" />
+            android:text="Disponiblidad: " />
 
         <TextView
             android:id="@+id/calleAviles1"
@@ -58,20 +53,15 @@
                 android:id="@+id/nombreAviles2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nombre del centro: "
+                android:text="Nombre del centro"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
             <TextView
                 android:id="@+id/actualAviles2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sitios disponibles: " />
-
-            <TextView
-                android:id="@+id/maximoAviles2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sitios maximos: " />
+                android:text="Disponiblidad: " />
 
             <TextView
                 android:id="@+id/calleAviles2"

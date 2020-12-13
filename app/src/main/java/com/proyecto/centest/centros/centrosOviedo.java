@@ -47,9 +47,9 @@ public class centrosOviedo extends AppCompatActivity {
         nombre2 = (TextView) findViewById(R.id.nombreOviedo2);
         nombre3 = (TextView) findViewById(R.id.nombreOviedo3);
 
-        maximo1 = (TextView) findViewById(R.id.maximoOviedo1);
+       /* maximo1 = (TextView) findViewById(R.id.maximoOviedo1);
         maximo2 = (TextView) findViewById(R.id.maximoOviedo2);
-        maximo3 = (TextView) findViewById(R.id.maximoOviedo3);
+        maximo3 = (TextView) findViewById(R.id.maximoOviedo3);*/
 
         actual1 = (TextView) findViewById(R.id.actualOviedo1);
         actual2 = (TextView) findViewById(R.id.actualOviedo2);
@@ -88,20 +88,20 @@ public class centrosOviedo extends AppCompatActivity {
 
                     nombre1.setText(nombreOvi1);
                     calle1.setText("Calle: " + calleOvi1);
-                    actual1.setText("Sitios disponible: " + disponibleOvi1);
-                    maximo1.setText("Sitios maximos: " + maximoOvi1);
+                    actual1.setText("Disponibilidad: " + disponibleOvi1 + "/" + maximoOvi1);
+                    //maximo1.setText("Sitios maximos: " + maximoOvi1);
                     horario1.setText("Horario: " + horarioOvi1);
 
                     nombre2.setText(nombreOvi2);
                     calle2.setText("Calle: " + calleOvi2);
-                    actual2.setText("Sitios disponible: " + disponibleOvi2);
-                    maximo2.setText("Sitios maximos: " + maximoOvi2);
+                    actual2.setText("Sitios disponible: " + disponibleOvi2 + "/" + maximoOvi2);
+                    //maximo2.setText("Sitios maximos: " + maximoOvi2);
                     horario2.setText("Horario: " + horarioOvi2);
 
                     nombre3.setText(nombreOvi3);
                     calle3.setText("Calle: " + calleOvi3);
-                    actual3.setText("Sitios disponible: " + disponibleOvi3);
-                    maximo3.setText("Sitios maximos: " + maximoOvi3);
+                    actual3.setText("Sitios disponible: " + disponibleOvi3 + "/" + maximoOvi3);
+                    //maximo3.setText("Sitios maximos: " + maximoOvi3);
                     horario3.setText("Horario: " + horarioOvi3);
 
                 }

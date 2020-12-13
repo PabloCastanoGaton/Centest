@@ -21,10 +21,10 @@ public class identificacionActivity extends AppCompatActivity {
 
     //Cajas de texto, boton y firebaseauth
     private EditText EditTextEmailIdentificacion;
-    private EditText EditTextContraseñaIdentificacion;
+    private EditText EditTextContrasenaIdentificacion;
 
     private Button botonInicio;
-    private Button objetoBoton1;
+    private Button botonRegistro;
     private Button restablecer;
     private Button localizacion;
 
@@ -32,7 +32,7 @@ public class identificacionActivity extends AppCompatActivity {
 
     //Variables
     private String emailIdent = "";
-    private String contraseñaIdent = "";
+    private String contrasenaIdent = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) { //Main
@@ -46,8 +46,8 @@ public class identificacionActivity extends AppCompatActivity {
             finish();
         }
 
-        objetoBoton1 = (Button) findViewById(R.id.botonRegistroTo); //Este botón te manda a la clase de registro
-        objetoBoton1.setOnClickListener(new View.OnClickListener() {
+        botonRegistro = (Button) findViewById(R.id.botonRegistroTo); //Este botón te manda a la clase de registro
+        botonRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intencion1 = new Intent(view.getContext(), registrarseActivity.class);
@@ -66,7 +66,7 @@ public class identificacionActivity extends AppCompatActivity {
 
         //Enlace entre las cajas de texto y botones de la interfaz y el código
         EditTextEmailIdentificacion = (EditText) findViewById(R.id.editTextEmailIdent);
-        EditTextContraseñaIdentificacion = (EditText) findViewById(R.id.editTextContraseñaIdent);
+        EditTextContrasenaIdentificacion = (EditText) findViewById(R.id.editTextContrasenaIdent);
         botonInicio = (Button) findViewById(R.id.botonInicio);
 
         botonInicio.setOnClickListener(new View.OnClickListener() {
@@ -75,20 +75,20 @@ public class identificacionActivity extends AppCompatActivity {
 
                 //Obtiene el texto eliminando los espacios que haya por delante y por detrás
                 emailIdent = EditTextEmailIdentificacion.getText().toString().trim();
-                contraseñaIdent = EditTextContraseñaIdentificacion.getText().toString().trim();
+                contrasenaIdent = EditTextContrasenaIdentificacion.getText().toString().trim();
 
                 if(TextUtils.isEmpty(emailIdent)){ //Si el email está vacio dará un error
                     EditTextEmailIdentificacion.setError("El email está vacío");
                     return;
                 }
 
-                else if(TextUtils.isEmpty(contraseñaIdent)){ //Si la contraseña está vacía dará un error
-                    EditTextContraseñaIdentificacion.setError("La contraseña está vacía");
+                else if(TextUtils.isEmpty(contrasenaIdent)){ //Si la contrasena está vacía dará un error
+                    EditTextContrasenaIdentificacion.setError("La contrasena está vacía");
                     return;
                 }
 
                else {
-                    mAuth.signInWithEmailAndPassword(emailIdent, contraseñaIdent).addOnCompleteListener(new OnCompleteListener<AuthResult>() { //Inicio de sesion mediante el usuario y la contraseña con firebase
+                    mAuth.signInWithEmailAndPassword(emailIdent, contrasenaIdent).addOnCompleteListener(new OnCompleteListener<AuthResult>() { //Inicio de sesion mediante el usuario y la contrasena con firebase
 
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {

@@ -46,9 +46,9 @@ public class centrosGijon extends AppCompatActivity {
         nombre2 = (TextView) findViewById(R.id.nombreGijon2);
         nombre3 = (TextView) findViewById(R.id.nombreGijon3);
 
-        maximo1 = (TextView) findViewById(R.id.maximoGijon1);
+        /* maximo1 = (TextView) findViewById(R.id.maximoGijon1);
         maximo2 = (TextView) findViewById(R.id.maximoGijon2);
-        maximo3 = (TextView) findViewById(R.id.maximoGijon3);
+        maximo3 = (TextView) findViewById(R.id.maximoGijon3); */
 
         actual1 = (TextView) findViewById(R.id.actualGijon1);
         actual2 = (TextView) findViewById(R.id.actualGijon2);
@@ -86,20 +86,20 @@ public class centrosGijon extends AppCompatActivity {
 
                 nombre1.setText(nombreGij1);
                 calle1.setText("Calle: " + calleGij1);
-                actual1.setText("Sitios disponible: " + disponibleGij1);
-                maximo1.setText("Sitios maximos: " + maximoGij1);
+                actual1.setText("Disponibilidad: " + disponibleGij1 + "/" + maximoGij1);
+                //maximo1.setText("Sitios maximos: " + maximoGij1);
                 horario1.setText("Horario: " + horarioGij1);
 
                 nombre2.setText(nombreGij2);
                 calle2.setText("Calle: " + calleGij2);
-                actual2.setText("Sitios disponible: " + disponibleGij2);
-                maximo2.setText("Sitios maximos: " + maximoGij2);
+                actual2.setText("Disponibilidad: " + disponibleGij2 + "/" + maximoGij2);
+               //maximo2.setText("Sitios maximos: " + maximoGij2);
                 horario2.setText("Horario: " + horarioGij2);
 
                 nombre3.setText(nombreGij3);
                 calle3.setText("Calle: " + calleGij3);
-                actual3.setText("Sitios disponible: " + disponibleGij3);
-                maximo3.setText("Sitios maximos: " + maximoGij3);
+                actual3.setText("Disponibilidad: " + disponibleGij3 + "/" + maximoGij3);
+                //maximo3.setText("Sitios maximos: " + maximoGij3);
                 horario3.setText("Horario: " + horarioGij3);
                 
             }

@@ -21,21 +21,16 @@
             android:id="@+id/nombreOviedo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre del centro: "
+            android:text="Nombre del centro"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-            android:textSize="15dp"/>
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/actualOviedo1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sitios disponibles: " />
-
-        <TextView
-            android:id="@+id/maximoOviedo1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sitios maximos: " />
+            android:text="Disponibilidad: " />
 
         <TextView
             android:id="@+id/calleOviedo1"
@@ -60,20 +55,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nombre del centro"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                android:textSize="15dp"/>
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/actualOviedo2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sitios disponibles" />
-
-            <TextView
-                android:id="@+id/maximoOviedo2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sitios maximos: " />
+                android:text="Disponibilidad: " />
 
             <TextView
                 android:id="@+id/calleOviedo2"
@@ -97,21 +87,16 @@
                     android:id="@+id/nombreOviedo3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Nombre del centro: "
+                    android:text="Nombre del centro"
+                    android:textAlignment="center"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/actualOviedo3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Sitios disponibles: " />
-
-                <TextView
-                    android:id="@+id/maximoOviedo3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Sitios maximos: " />
+                    android:text="Disponibilidad: " />
 
                 <TextView
                     android:id="@+id/calleOviedo3"

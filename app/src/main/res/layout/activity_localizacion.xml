@@ -16,23 +16,36 @@
 
     <Button
         android:id="@+id/botonOviedo"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Oviedo" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:background="#009688"
+        android:text="Oviedo"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/botonGijon"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Gijon"/>
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#009688"
+        android:text="Gijon"
+        android:textColor="#FFFFFF" />
 
     <Button
         android:id="@+id/botonAviles"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:text="Aviles" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="160dp"
+        android:backgroundTint="#009688"
+        android:text="Aviles"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>
 

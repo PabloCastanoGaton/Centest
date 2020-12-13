@@ -40,8 +40,8 @@ public class centrosAviles extends AppCompatActivity {
         nombre1 = (TextView) findViewById(R.id.nombreAviles1);
         nombre2 = (TextView) findViewById(R.id.nombreAviles2);
 
-        maximo1 = (TextView) findViewById(R.id.maximoAviles1);
-        maximo2 = (TextView) findViewById(R.id.maximoAviles2);
+       /* maximo1 = (TextView) findViewById(R.id.maximoAviles1);
+        maximo2 = (TextView) findViewById(R.id.maximoAviles2); */
 
         actual1 = (TextView) findViewById(R.id.actualAviles1);
         actual2 = (TextView) findViewById(R.id.actualAviles2);
@@ -70,14 +70,14 @@ public class centrosAviles extends AppCompatActivity {
 
                 nombre1.setText(nombreAvi1);
                 calle1.setText("Calle: " + calleAvi1);
-                actual1.setText("Sitios disponible: " + disponibleAvi1);
-                maximo1.setText("Sitios maximos: " + maximoAvi1);
+                actual1.setText("Disponibilidad: " + disponibleAvi1 + "/" + maximoAvi1);
+                //maximo1.setText("Sitios maximos: " + maximoAvi1);
                 horario1.setText("Horario: " + horarioAvi1);
 
                 nombre2.setText(nombreAvi2);
                 calle2.setText("Calle: " + calleAvi2);
-                actual2.setText("Sitios disponible: " + disponibleAvi2);
-                maximo2.setText("Sitios maximos: " + maximoAvi2);
+                actual2.setText("Sitios disponible: " + disponibleAvi2 + "/" + maximoAvi2);
+                //maximo2.setText("Sitios maximos: " + maximoAvi2);
                 horario2.setText("Horario: " + horarioAvi2);
                 
             }
